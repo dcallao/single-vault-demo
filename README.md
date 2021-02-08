@@ -8,7 +8,7 @@
 * A valid AWS account
 * A valid Datadog account
 
-## Workshop Diagram
+## Demo App Diagram
 
 ![Workshop Diagram](docs/img/Vault_Workshop_Diagram.png)
 
