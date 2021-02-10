@@ -102,8 +102,8 @@ cat << EOF >/etc/awslogs-config-file
 [general]
 state_file = /var/awslogs/state/agent-state
 
-[/var/log/syslog]
-file = /var/log/syslog
+[/var/log/web.log]
+file = /var/log/web.log
 log_group_name = ${web_log_group}
 log_stream_name = ${web_log_stream}
 datetime_format = %b %d %H:%M:%S
@@ -223,5 +223,5 @@ vault agent -config=/home/ubuntu/vault-agent.hcl -log-level=debug 2>&1 | logger 
 # Start the Web Server in /opt/spring-petclinic
 cd /opt/spring-petclinic
 ./mvnw clean package -DskipTests=true
-java -jar target/*.jar 2>&1 | logger &
+nohup java -jar target/*.jar > /var/log/web.log &
 ###########################################

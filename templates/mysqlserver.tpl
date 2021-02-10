@@ -45,9 +45,11 @@ touch /var/log/mysql/mysql.log
 chown mysql:mysql /var/log/mysql/mysql.log
 touch /var/log/mysql/mysql-error.log
 chown mysql:mysql /var/log/mysql/mysql-error.log
+chmod +rx /var/log/mysql/
 
 cat << EOF > /etc/mysql/mysql.conf.d/petclinic.cnf
 [mysqld]
+performance_schema = on
 general_log = on
 general_log_file=/var/log/mysql/mysql.log
 log_error=/var/log/mysql/mysql-error.log
