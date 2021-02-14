@@ -11,6 +11,3 @@
 ## Demo App Diagram
 
 ![Workshop Diagram](docs/img/Vault_Workshop_Diagram.png)
-
-## Hiring Challenge Steps
-Check out steps in this [Google doc](https://docs.google.com/document/d/1SHB32jIYlDuvq609g4Uj24lQAnkAODj7DC0Vq4MU9vM/edit?usp=sharing)
